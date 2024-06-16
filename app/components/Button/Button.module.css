@@ -1,0 +1,55 @@
+.button {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-width: 148px;
+	height: 35px;
+	padding: 0 10px;
+	font-weight: 400;
+	font-size: 14px;
+	line-height: 100%;
+	text-align: center;
+	border-radius: 5px;
+	gap: 10px;
+	box-sizing: border-box;
+	cursor: pointer;
+	outline: none;
+	transition: all 0.3s;
+	border: none;
+	transition: all 0.3s;
+}
+
+
+.button:hover .arrow path {
+    fill: #fff;
+}
+
+
+.primary {
+	background: #7653fc;
+	color: #fff;
+}
+
+.primary .arrow path {
+    fill: #fff;
+}
+
+.primary:hover {
+	background: #5933f0;
+}
+
+.ghost {
+	border: 1px solid #ebebeb;
+	color: #3b434e;
+	background: none;
+}
+
+.ghost:hover {
+	color: #fff;
+	background: #000;
+}
+
+
+.arrow.down {
+    transform: rotate(90deg);
+}

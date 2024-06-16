@@ -1,0 +1,70 @@
+.tag {
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	box-sizing: border-box;
+	border-radius: 20px;
+	padding: 0 10px;
+	width: auto;
+	position: relative;
+	overflow: hidden;
+}
+
+.tag a {
+	color: inherit;
+	font-size: inherit;
+	line-height: inherit;
+	text-decoration: none;
+}
+
+.ghost {
+	border: 1px solid #ebebeb;
+	background: none;
+	font-weight: 500;
+	font-size: 12px;
+	line-height: 100%;
+	color: #3b434e;
+}
+
+.red {
+	background: #de0000;
+	font-weight: 600;
+	font-size: 14px;
+	text-align: center;
+	color: #fff;
+}
+
+.green {
+	background: #c8f8e4;
+	font-weight: 700;
+	font-size: 12px;
+	line-height: 100%;
+	color: #1dc37e;
+}
+
+.grey {
+	background: #b3c0d9;
+	font-weight: 600;
+	font-size: 14px;
+	line-height: 100%;
+	text-align: center;
+	color: #fff;
+}
+
+.primary {
+	border: 1px solid #7653fc;
+	font-weight: 500;
+	font-size: 12px;
+	text-align: center;
+	color: #7653fc;
+}
+
+
+.s {
+	height: 22px;
+}
+
+.m {
+	height: 25px;
+}
