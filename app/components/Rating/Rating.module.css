@@ -1,0 +1,16 @@
+.ratings {
+    display: flex;
+}
+
+.star {
+    cursor: pointer;
+}
+
+.star svg {
+    margin-right: 5px;
+    display: block;
+}
+
+.filled svg {
+    fill: #7653FC;
+}

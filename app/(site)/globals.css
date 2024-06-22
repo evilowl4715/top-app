@@ -11,13 +11,14 @@ body {
 }
 
 body {
-	color: #3B434E;
+	color: #3b434e;
 	font-size: 16px;
 	line-height: 24px;
 	font-weight: 400;
-	background: #F5F6F8;
+	background: #f5f6f8;
 }
 
-path, circle {
+path,
+circle {
 	transition: all 0.3s;
 }
