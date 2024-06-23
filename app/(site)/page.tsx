@@ -2,8 +2,15 @@
 import { useState } from 'react';
 import { Button, Htag, Ptag, Tag, Rating } from '../components';
 import styles from './page.module.css';
+import { Menu } from './components/Menu/Menu';
 
-export default function Home() {
+// для pages route
+// const {data: menu} = await axios.post<MenuItem[]>(API.topPage.find, {
+// 	firstCategory: 0
+// });
+
+
+export default async function Home() {
 	const [rating, setRating] = useState<number>(4);
 
 	// useEffect(() => {
@@ -13,8 +20,12 @@ export default function Home() {
 	// 	};
 	// }, []);
 
+
 	return (
 		<main className={styles.main}>
+			<div>
+				<Menu/>
+			</div>
 			<Htag tag='h1'>hi</Htag>
 			<Button appearance='primary'>Привет</Button>
 			<Button appearance='ghost' arrow='right'>

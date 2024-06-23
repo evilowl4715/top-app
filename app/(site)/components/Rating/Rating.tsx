@@ -3,7 +3,7 @@ import { useEffect, useState, KeyboardEvent } from 'react';
 import styles from './Rating.module.css';
 import { RatingProps } from './Rating.props';
 import cn from 'classnames';
-import StarIcon from '../../../public/rating-star.svg';
+import StarIcon from '../../../../public/rating-star.svg';
 
 export const Rating = ({
 	isEditable = false,

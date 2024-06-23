@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import { Noto_Sans } from 'next/font/google';
 import './globals.css';
-import { Sidebar } from './components/Sidebar';
+import { Sidebar } from './components/Sidebar/Sidebar';
 import { Header } from '../components/Header/Header';
 import { Footer } from '../components/Footer/Footer';
 import styles from './layout.module.css';
