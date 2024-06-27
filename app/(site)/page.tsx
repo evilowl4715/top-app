@@ -9,8 +9,7 @@ import { Menu } from './components/Menu/Menu';
 // 	firstCategory: 0
 // });
 
-
-export default async function Home() {
+export default  function Home() {
 	const [rating, setRating] = useState<number>(4);
 
 	// useEffect(() => {
@@ -20,12 +19,8 @@ export default async function Home() {
 	// 	};
 	// }, []);
 
-
 	return (
 		<main className={styles.main}>
-			<div>
-				<Menu/>
-			</div>
 			<Htag tag='h1'>hi</Htag>
 			<Button appearance='primary'>Привет</Button>
 			<Button appearance='ghost' arrow='right'>
@@ -49,6 +44,7 @@ export default async function Home() {
 				tag
 			</Tag>
 			<Rating rating={rating} isEditable setRating={setRating} />
+			<Menu/>
 		</main>
 	);
 }
