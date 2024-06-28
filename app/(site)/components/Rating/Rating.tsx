@@ -1,4 +1,4 @@
-'use cliten';
+'use client';
 import { useEffect, useState, KeyboardEvent } from 'react';
 import styles from './Rating.module.css';
 import { RatingProps } from './Rating.props';
@@ -15,14 +15,12 @@ export const Rating = ({
 		new Array(5).fill(<></>)
 	);
 
-	useEffect(() => {
-		constructRating(rating);
-	}, [rating]);
 
 	const constructRating = (currentRating: number) => {
 		const updatedArray = ratingArray.map((r: JSX.Element, i: number) => {
 			return (
 				<span
+					key={i}
 					className={cn(styles.star, {
 						[styles.filled]: i < currentRating
 					})}
@@ -42,6 +40,10 @@ export const Rating = ({
 
 		setRatingArray(updatedArray);
 	};
+
+	useEffect(() => {
+		constructRating(rating);
+	}, [rating]);
 
 	const changeDisplay = (i: number) => {
 		if (!isEditable) {
