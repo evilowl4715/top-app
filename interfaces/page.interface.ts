@@ -5,35 +5,40 @@ export enum TopLevelCategory {
 	Products
 }
 
-export interface TopPageAdvantage {
-	_id: string;
-	title: string;
-	description: string;
-}
-
-export interface HhData {
-	_id: string;
-	count: number;
-	juniorSalary: number;
-	middleSalary: number;
-	seniorSalary: number;
-	updatedAt: Date;
-}
 
 export interface TopPageModel {
-	tags: string[];
-	_id: string;
-	secondCategory: string;
-	alias: string;
-	title: string;
-	category: string;
-	seoText?: string;
-	tagsTitle: string;
-	metaTitle: string;
-	metaDescription: string;
-	firstCategory: TopLevelCategory;
-	advantages?: TopPageAdvantage[];
-	createdAt: Date;
-	updatedAt: Date;
-	hh?: HhData;
-}
+	_id: string
+	tags: string[]
+	secondCategory: string
+	alias: string
+	title: string
+	category: string
+	seoText: string
+	tagsTitle: string
+	metaTitle: string
+	metaDescription: string
+	firstCategory: TopLevelCategory
+	advantages: TopPageAdvantage[]
+	createdAt: string
+	updatedAt: string
+	__v: number
+	hh: HhData
+	categoryOn: string
+  }
+  
+  export interface TopPageAdvantage {
+	title: string
+	description: string
+	_id: string
+  }
+  
+  export interface HhData {
+	count: number
+	juniorSalary: number
+	middleSalary: number
+	seniorSalary: number
+	updatedAt: string
+	_id: string
+  }
+  
+  

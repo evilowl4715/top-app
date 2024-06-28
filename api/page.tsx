@@ -2,9 +2,10 @@ import { TopPageModel } from '@/interfaces/page.interface';
 import { API } from '../app/api';
 
 export async function getPage(alias: string): Promise<TopPageModel | null> {
-	const res = await fetch(API.topPage.byAlias + alias);
+	const res = await fetch(API.topPage.byAlias + '/' + alias);
     if(!res.ok) {
         return null;
     }
+    console.log(res);
 	return res.json();
 }
