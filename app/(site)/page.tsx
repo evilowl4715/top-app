@@ -2,7 +2,6 @@
 import { useState } from 'react';
 import { Button, Htag, Ptag, Tag, Rating } from '../components';
 import styles from './page.module.css';
-import { Menu } from './components/Menu/Menu';
 
 // для pages route
 // const {data: menu} = await axios.post<MenuItem[]>(API.topPage.find, {
@@ -44,7 +43,6 @@ export default  function Home() {
 				tag
 			</Tag>
 			<Rating rating={rating} isEditable setRating={setRating} />
-			<Menu/>
 		</main>
 	);
 }

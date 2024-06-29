@@ -17,8 +17,20 @@ body {
 	font-weight: 400;
 	background: #f5f6f8;
 }
-
+svg,
 path,
 circle {
 	transition: all 0.3s;
+}
+
+a {
+    text-decoration: none;
+	transition: all 0.3s;
+	color: inherit;
+	font-family: inherit;
+	font-size: inherit;
+}
+
+a:hover {
+	color: #7653fc;
 }
