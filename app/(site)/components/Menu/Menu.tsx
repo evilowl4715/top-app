@@ -8,7 +8,7 @@ import { TopLevelCategory } from '@/interfaces/page.interface';
 import cn from 'classnames';
 import styles from './menu.module.css';
 
-const firstLevelMenu: FirstLevelMenuItem[] = [
+const firstLevelMenu: FirstLevelMenuItem[] = [	
 	{
 		route: 'courses',
 		name: 'Курсы',
