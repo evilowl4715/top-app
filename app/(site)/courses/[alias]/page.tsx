@@ -12,7 +12,7 @@ export async function generateStaticParams() {
 	return menu.flatMap(item => item.pages.map(page => ({alias: page.alias})));
 }
 
-export default async function PageCourses({
+export default async function PageCourse({
 	params
 }: {
 	params: { alias: string };
