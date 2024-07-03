@@ -20,9 +20,9 @@ export default async function PageCourse({
 
 	const page = await getPage(params.alias);
 
-	if(!page) {
-		notFound();
-	}
+	// if(!page) {
+	// 	notFound();
+	// }
 
 	return (
 		<div>Страница c {page.title}</div>
