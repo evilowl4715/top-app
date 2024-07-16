@@ -44,6 +44,6 @@ export default async function TopPage({
 
 
 	return (
-		<TopModelPage page={page} products={products} firstCategory={firstCategoryItem}/>
+		<TopModelPage page={page} products={products} firstCategory={firstCategoryItem.id}/>
 	);
 }
