@@ -3,6 +3,8 @@ import { getPage } from '@/api/page';
 import { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import { firstLevelMenu } from '@/helpers/helpers';
+import { getProducts } from '@/api/products';
+import { TopModelPage } from '../../components/TopModelPage/TopModelPage';
 
 export const metadata: Metadata = {
 	title: 'Страница'
@@ -20,10 +22,10 @@ export async function generateStaticParams() {
 	);
 }
 
-export default async function PageCourse({
+export default async function TopPage({
 	params
 }: {
-	params: { type: string; alias: string };
+	params: { type: string; alias: string;};
 }) {
 	const page = await getPage(params.alias);
 
@@ -31,17 +33,17 @@ export default async function PageCourse({
 		notFound();
 	}
 
+	const products = await getProducts(page.category);
+
 	const firstCategoryItem = firstLevelMenu.find(m => m.route === params.type);
 
 	if (!firstCategoryItem) {
 		notFound();
 	}
 
+
+
 	return (
-		<div>
-			<h1>{firstCategoryItem.name}</h1>
-			<p>{page.title}</p>
-			<p>Type: {params.type}</p>
-		</div>
+		<TopModelPage page={page} products={products} firstCategory={firstCategoryItem}/>
 	);
 }
