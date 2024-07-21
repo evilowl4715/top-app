@@ -1,6 +1,6 @@
 'use client';
 import { useState } from 'react';
-import { Button, Htag, Ptag, Tag, Rating } from '../components';
+import { Button, Htag, Ptag, Tag, Rating, Input, Textarea } from '../components';
 import styles from './page.module.css';
 
 // для pages route
@@ -43,6 +43,8 @@ export default  function Home() {
 				tag
 			</Tag>
 			<Rating rating={rating} isEditable setRating={setRating} />
+			<Input placeholder={'что то'}/>
+			<Textarea placeholder={'что то'}/>
 		</main>
 	);
 }

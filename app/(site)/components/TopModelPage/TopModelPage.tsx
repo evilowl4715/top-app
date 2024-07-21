@@ -9,20 +9,23 @@ import { Sort } from '../Sort/Sort';
 import { SortEnum } from '../Sort/Sort.props';
 import { useReducer } from 'react';
 import { sortReduser } from './sort.reducer';
+import { Product } from '../Product/Product';
 
 export const TopModelPage = ({
 	page,
 	products,
 	firstCategory
 }: TopModelPageProps) => {
-
-	const [{ products: sortedProducts, sort }, dispatchSort] = useReducer(sortReduser, {
-		products,
-		sort: SortEnum.Rating
-	});
+	const [{ products: sortedProducts, sort }, dispatchSort] = useReducer(
+		sortReduser,
+		{
+			products,
+			sort: SortEnum.Rating
+		}
+	);
 
 	const setSort = (sort: SortEnum) => {
-		dispatchSort({type: sort});
+		dispatchSort({ type: sort });
 	};
 
 	return (
@@ -38,7 +41,7 @@ export const TopModelPage = ({
 			</div>
 			<div>
 				{sortedProducts &&
-					sortedProducts.map(p => <div key={p._id}>{p.title}</div>)}
+					sortedProducts.map(p => <Product key={p._id} product={p} />)}
 			</div>
 			<div className={styles.hhTitle}>
 				<Htag tag='h2'>Вакансии - {page.category}</Htag>

@@ -5,3 +5,5 @@ export * from './Tag/Tag';
 export * from '../(site)/components/Rating/Rating';
 export * from './HhData/HhData';
 export * from './Card/Card';
+export * from './Input/Input';
+export * from './Textarea/Textarea';
