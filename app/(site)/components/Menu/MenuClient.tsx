@@ -97,7 +97,7 @@ const MenuClient: React.FC<MenuClientProps> = ({
 	const buildThirdLevel = (pages: PageItem[], route: string) => {
 		return pages.map(p => (
 			<Link
-				key={p.alias}
+				key={p._id}
 				href={`/${route}/${p.alias}`}
 				className={cn(styles.thirdLevel, {
 					[styles.thirdLevelActive]: `/${route}/${p.alias}` == pathname

@@ -1,5 +1,6 @@
 .ratings {
     display: flex;
+    position: relative;
 }
 
 .star {
@@ -13,4 +14,11 @@
 
 .filled svg {
     fill: #7653FC;
+}
+
+.errorMessage {
+	position: absolute;
+	bottom: -20px;
+	left: 0;
+	color: red;
 }
