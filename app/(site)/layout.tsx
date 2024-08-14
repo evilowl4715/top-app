@@ -5,6 +5,7 @@ import { Sidebar } from './components/Sidebar/Sidebar';
 import { Header } from '../components/Header/Header';
 import { Footer } from '../components/Footer/Footer';
 import styles from './layout.module.css';
+import { Up } from '../components';
 
 const NotoSans = Noto_Sans({ subsets: ['latin'] });
 
@@ -27,6 +28,7 @@ export default function RootLayout({
 					<Sidebar className={styles.sidebar} />
 					<div className={styles.body}>{children}</div>
 					<Footer className={styles.footer}/>
+					<Up/>
 				</div>
 			</body>
 		</html>

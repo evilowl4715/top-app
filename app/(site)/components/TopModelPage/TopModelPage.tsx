@@ -10,6 +10,7 @@ import { SortEnum } from '../Sort/Sort.props';
 import { useEffect, useReducer } from 'react';
 import { sortReduser } from './sort.reducer';
 import { Product } from '../Product/Product';
+import { useScrollY } from '@/hooks/useScrollY';
 
 export const TopModelPage = ({
 	page,
@@ -24,6 +25,8 @@ export const TopModelPage = ({
 		}
 	);
 
+	const y = useScrollY();
+
 	const setSort = (sort: SortEnum) => {
 		dispatchSort({ type: sort });
 	};
@@ -34,6 +37,7 @@ export const TopModelPage = ({
 
 	return (
 		<div className={styles.wrapper}>
+			{y}
 			<div className={styles.title}>
 				<Htag tag='h1'>{page.title}</Htag>
 				{products && (
