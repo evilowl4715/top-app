@@ -7,16 +7,16 @@ export const ButtonIcon = ({
 	children,
 	className,
 	...props
-}: ButtonIconProps): JSX.Element => {
+}: ButtonIconProps) => {
 	return (
-		<ButtonIcon
-			className={cn(styles.ButtonIcon, className, {
+		<button
+			className={cn(styles.button, className, {
 				[styles.primary]: appearance == 'primary',
 				[styles.white]: appearance == 'white'
 			})}
 			{...props}
 		>
 			{children}
-		</ButtonIcon>
+		</button>
 	);
 };
